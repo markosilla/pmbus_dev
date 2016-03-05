@@ -1,0 +1,1 @@
+cmd_/home/pi/pmbus/i2c_spi_bridge/spi-sc18is602.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/pmbus/i2c_spi_bridge/spi-sc18is602.ko /home/pi/pmbus/i2c_spi_bridge/spi-sc18is602.o /home/pi/pmbus/i2c_spi_bridge/spi-sc18is602.mod.o

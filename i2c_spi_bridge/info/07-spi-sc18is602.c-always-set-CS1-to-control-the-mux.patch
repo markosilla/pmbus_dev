@@ -1,0 +1,24 @@
+From bfc62403863be03825f3658daecdfc6a7ae613d8 Mon Sep 17 00:00:00 2001
+From: Gabor Toth <Gabor.Toth@ericsson.com>
+Date: Thu, 5 Nov 2015 20:18:29 +0100
+Subject: [PATCH] spi-sc18is602.c always set CS1 to control the mux
+
+---
+ drivers/spi/spi-sc18is602.c |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/drivers/spi/spi-sc18is602.c b/drivers/spi/spi-sc18is602.c
+index 121c2e1..c0030c3 100644
+--- a/drivers/spi/spi-sc18is602.c
++++ b/drivers/spi/spi-sc18is602.c
+@@ -80,6 +80,7 @@ static int sc18is602_txrx(struct sc18is602 *hw, struct spi_message *msg,
+ 	if (hw->tlen == 0) {
+ 		/* First byte (I2C command) is chip select */
+ 		hw->buffer[0] = 1 << msg->spi->chip_select;
++		hw->buffer[0] |= (1 << 1); /*CS1 controls the mux, set it always*/
+ 		hw->tlen = 1;
+ 		hw->rindex = 0;
+ 	}
+-- 
+1.7.9.5
+

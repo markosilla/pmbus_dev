@@ -1,0 +1,145 @@
+From 4dacc9cc30a11f22675e62d7f0ffe8999676b10c Mon Sep 17 00:00:00 2001
+From: Gabor Toth <Gabor.Toth@ericsson.com>
+Date: Sun, 15 Nov 2015 20:34:25 +0100
+Subject: [PATCH] add driver binding support to spi-sc18is602.c
+
+Add two sysfs entries to bind and unbind spi devices
+to the driver
+---
+ drivers/spi/spi-sc18is602.c |   99 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 99 insertions(+)
+
+diff --git a/drivers/spi/spi-sc18is602.c b/drivers/spi/spi-sc18is602.c
+index c0030c3..19837ed 100644
+--- a/drivers/spi/spi-sc18is602.c
++++ b/drivers/spi/spi-sc18is602.c
+@@ -81,6 +81,7 @@ static int sc18is602_txrx(struct sc18is602 *hw, struct spi_message *msg,
+ 		/* First byte (I2C command) is chip select */
+ 		hw->buffer[0] = 1 << msg->spi->chip_select;
+ 		hw->buffer[0] |= (1 << 1); /*CS1 controls the mux, set it always*/
++
+ 		hw->tlen = 1;
+ 		hw->rindex = 0;
+ 	}
+@@ -254,6 +255,8 @@ static int sc18is602_setup(struct spi_device *spi)
+ 	return sc18is602_check_transfer(spi, NULL, 0);
+ }
+ 
++static const struct attribute_group *spi_sc18is602_groups[];
++
+ static int sc18is602_probe(struct i2c_client *client,
+ 			   const struct i2c_device_id *id)
+ {
+@@ -311,6 +314,7 @@ static int sc18is602_probe(struct i2c_client *client,
+ 	master->transfer_one_message = sc18is602_transfer_one;
+ 	master->dev.of_node = np;
+ 
++	master->dev.groups = spi_sc18is602_groups;
+ 	error = devm_spi_register_master(dev, master);
+ 	if (error)
+ 		goto error_reg;
+@@ -330,6 +334,101 @@ static const struct i2c_device_id sc18is602_id[] = {
+ };
+ MODULE_DEVICE_TABLE(i2c, sc18is602_id);
+ 
++/* ################################################################ */
++
++/*
++ * Let users instantiate SPI GPIO devices through sysfs.
++ * This can be used when you don't really know what you are doing.
++ * The format is:
++ *  "<SCK MOSI MISO CS device_modalias bus_hz mode_nr>".
++ */
++static ssize_t hook_to_store(struct device *dev, struct device_attribute *attr, const char *buf,
++			  size_t count)
++{
++	//static atomic_t	userland_spi_dyn_bus_id = ATOMIC_INIT((1<<4) - 1);
++	struct spi_master *master = container_of(dev, struct spi_master, dev);
++	//struct platform_driver *pl_driver = to_platform_driver(drv);
++	//struct spi_sc18is602_dynamic_client *client;
++	int fields;
++	struct spi_board_info		*userland_spi_board_info;
++
++	userland_spi_board_info = kzalloc(1 * sizeof(*userland_spi_board_info), GFP_KERNEL);
++	if (!userland_spi_board_info)
++		return -ENOMEM;
++
++	*userland_spi_board_info = (struct spi_board_info){
++		.modalias		= "",
++		.max_speed_hz		= 1000000,
++		.bus_num		= master->bus_num,
++		.chip_select		= 0,
++		.mode			= SPI_MODE_0,
++		.controller_data	= (void *)0,
++		.platform_data		= NULL,
++	};
++
++	/* TODO: THIS IS UNSAFE AS... ...SOMETHING VERY UNSAFE! */
++	fields = sscanf(buf, "%s %d %d",
++			(char *)&(userland_spi_board_info->modalias),
++			( int *)&(userland_spi_board_info->max_speed_hz),
++			( int *)&(userland_spi_board_info->mode));
++
++	if (fields < 3) {
++		printk("%s: required format is \"%%s %%d %%d\", found only %d fields.\n",
++			dev->init_name, fields);
++		return -EINVAL;
++	}
++	printk("%s: attempting to register a new SPI device...\n", dev->init_name);
++	printk("%s: SPI config is: device modalias %s, bus speed %d Hz, mode %d\n", dev->init_name,
++			(char *)(userland_spi_board_info->modalias),
++			( int  )(userland_spi_board_info->max_speed_hz),
++			( int  )(userland_spi_board_info->mode));
++
++	printk("%s: Using bus number %d...\n", dev->init_name, userland_spi_board_info->bus_num);
++
++	if (!spi_new_device(master, userland_spi_board_info)) {
++		printk("%s: error during instantiation!\n", dev->init_name);
++		return -EIO;
++	}
++
++	printk("%s: done!\n", dev->init_name);
++	return count;
++}
++
++static ssize_t hook_to_show(struct device *dev, struct device_attribute *attr, char *buf)
++{
++	return sprintf(buf, "%s: required format is \"modalias max_speed_hz mode\" -> \"%%s %%d %%d\"\n", dev->init_name);
++}
++static DEVICE_ATTR_RW(hook_to);
++
++/*
++ * And of course let the users delete the devices they instantiated, if
++ * they got it wrong.
++ * ...just not yet.
++ * */
++static ssize_t unhook_store(struct device *dev, struct device_attribute *attr, const char *buf,
++			    size_t count)
++{
++	printk("%s: Not yet, sorry.\n", dev->init_name);
++	return -EINVAL;
++
++}
++
++static ssize_t unhook_show(struct device *dev, struct device_attribute *attr, char *buf)
++{
++	return sprintf(buf, "%s: nope.\n", dev->init_name);
++}
++
++static DEVICE_ATTR_RW(unhook);
++
++static struct attribute *spi_sc18is602_attrs[] = {
++	&dev_attr_unhook.attr,
++	&dev_attr_hook_to.attr,
++	NULL
++};
++ATTRIBUTE_GROUPS(spi_sc18is602);
++
++/* ################################################################ */
++
+ static struct i2c_driver sc18is602_driver = {
+ 	.driver = {
+ 		.name = "sc18is602",
+-- 
+1.7.9.5
+
