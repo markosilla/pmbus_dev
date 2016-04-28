@@ -1,0 +1,1 @@
+cmd_/home/pi/pmbus/pmbus_drivers/pmbus/bmr46x.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/pmbus/pmbus_drivers/pmbus/bmr46x.ko /home/pi/pmbus/pmbus_drivers/pmbus/bmr46x.o /home/pi/pmbus/pmbus_drivers/pmbus/bmr46x.mod.o

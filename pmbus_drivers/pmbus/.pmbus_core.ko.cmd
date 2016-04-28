@@ -1,0 +1,1 @@
+cmd_/home/pi/pmbus/pmbus_drivers/pmbus/pmbus_core.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/pmbus/pmbus_drivers/pmbus/pmbus_core.ko /home/pi/pmbus/pmbus_drivers/pmbus/pmbus_core.o /home/pi/pmbus/pmbus_drivers/pmbus/pmbus_core.mod.o
