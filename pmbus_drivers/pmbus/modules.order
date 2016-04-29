@@ -1,3 +1,4 @@
 kernel//home/pi/pmbus/pmbus_drivers/pmbus/pmbus.ko
 kernel//home/pi/pmbus/pmbus_drivers/pmbus/pmbus_core.ko
 kernel//home/pi/pmbus/pmbus_drivers/pmbus/bmr46x.ko
+kernel//home/pi/pmbus/pmbus_drivers/pmbus/zl6100.ko

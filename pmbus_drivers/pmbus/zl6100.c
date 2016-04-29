@@ -56,10 +56,10 @@ struct zl6100_data {
 #define VMON_UV_FAULT			(1 << 1)
 #define VMON_OV_FAULT			(1 << 0)
 
-#define ZL6100_WAIT_TIME		1000	/* uS	*/
+#define ZL6100_WAIT_TIME		1000000	/* uS	*/
 
-static ushort delay = ZL6100_WAIT_TIME;
-module_param(delay, ushort, 0644);
+static ulong delay = ZL6100_WAIT_TIME;
+module_param(delay, ulong, 0644);
 MODULE_PARM_DESC(delay, "Delay between chip accesses in uS");
 
 /* Convert linear sensor value to milli-units */

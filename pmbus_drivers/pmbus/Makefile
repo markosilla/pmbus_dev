@@ -1,7 +1,7 @@
 TARGET		:= $(shell uname -r)
 KERNEL_MODULES	:= /lib/modules/$(TARGET)
 KERNEL_BUILD	:= $(KERNEL_MODULES)/build
-DRIVER 		:= pmbus pmbus_core bmr46x
+DRIVER 		:= pmbus pmbus_core bmr46x zl6100
 
 obj-m		:= $(patsubst %,%.o,$(DRIVER))
 obj-ko		:= $(patsubst %,%.ko,$(DRIVER))
