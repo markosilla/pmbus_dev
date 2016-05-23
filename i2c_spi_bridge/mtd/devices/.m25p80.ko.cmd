@@ -1,1 +1,0 @@
-cmd_/home/pi/pmbus/i2c_spi_bridge/mtd/devices/m25p80.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/pmbus/i2c_spi_bridge/mtd/devices/m25p80.ko /home/pi/pmbus/i2c_spi_bridge/mtd/devices/m25p80.o /home/pi/pmbus/i2c_spi_bridge/mtd/devices/m25p80.mod.o

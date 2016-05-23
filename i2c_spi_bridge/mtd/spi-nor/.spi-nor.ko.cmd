@@ -1,1 +1,0 @@
-cmd_/home/pi/pmbus/i2c_spi_bridge/mtd/spi-nor/spi-nor.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/pmbus/i2c_spi_bridge/mtd/spi-nor/spi-nor.ko /home/pi/pmbus/i2c_spi_bridge/mtd/spi-nor/spi-nor.o /home/pi/pmbus/i2c_spi_bridge/mtd/spi-nor/spi-nor.mod.o
