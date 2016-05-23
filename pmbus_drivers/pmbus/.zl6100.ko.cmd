@@ -1,1 +1,0 @@
-cmd_/home/pi/pmbus/pmbus_drivers/pmbus/zl6100.ko := ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/pi/pmbus/pmbus_drivers/pmbus/zl6100.ko /home/pi/pmbus/pmbus_drivers/pmbus/zl6100.o /home/pi/pmbus/pmbus_drivers/pmbus/zl6100.mod.o
