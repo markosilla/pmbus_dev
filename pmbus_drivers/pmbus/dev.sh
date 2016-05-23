@@ -19,7 +19,6 @@ echo "DEPMOD"
 sudo depmod -a
 
 echo "REMOVE MODULES"
-sudo modprobe -r zl6100
 sudo modprobe -r pmbus
 sudo modprobe -r bmr46x
 sudo modprobe -r pmbus_core
@@ -30,6 +29,5 @@ sudo modprobe hwmon
 sudo modprobe pmbus_core
 sudo modprobe pmbus
 sudo modprobe bmr46x
-sudo modprobe zl6100
 
 echo "FINISHED"
