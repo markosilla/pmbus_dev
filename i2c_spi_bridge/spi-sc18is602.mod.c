@@ -33,6 +33,12 @@ __attribute__((section("__versions"))) = {
 	{ 0x12a38747, __VMLINUX_SYMBOL_STR(usleep_range) },
 	{ 0xf71a0746, __VMLINUX_SYMBOL_STR(i2c_master_recv) },
 	{ 0xe707d823, __VMLINUX_SYMBOL_STR(__aeabi_uidiv) },
+	{ 0x91715312, __VMLINUX_SYMBOL_STR(sprintf) },
+	{ 0xdad6c911, __VMLINUX_SYMBOL_STR(spi_new_device) },
+	{ 0x20c55ae0, __VMLINUX_SYMBOL_STR(sscanf) },
+	{ 0x28ca1037, __VMLINUX_SYMBOL_STR(kmem_cache_alloc_trace) },
+	{ 0x4479bcd2, __VMLINUX_SYMBOL_STR(kmalloc_caches) },
+	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
 	{ 0x2e5810c6, __VMLINUX_SYMBOL_STR(__aeabi_unwind_cpp_pr1) },
 	{ 0xb1ad28e0, __VMLINUX_SYMBOL_STR(__gnu_mcount_nc) },
 };
@@ -46,4 +52,4 @@ MODULE_ALIAS("i2c:sc18is602");
 MODULE_ALIAS("i2c:sc18is602b");
 MODULE_ALIAS("i2c:sc18is603");
 
-MODULE_INFO(srcversion, "1C5AD7975D272BC24279835");
+MODULE_INFO(srcversion, "2CCA6D838A8EB1F5BDFE2CA");

@@ -1,0 +1,1000 @@
+ 1007  cat Makefile 
+ 1008  cat dev.sh 
+ 1009  cd ..
+ 1010  ls
+ 1011  cd ..
+ 1012  ls
+ 1013  cd ..
+ 1014  cd pmbus/
+ 1015  ls
+ 1016  git status
+ 1017  git log
+ 1018  ls
+ 1019  cd pmbus_drivers/
+ 1020  ls
+ 1021  cd pmbus/
+ 1022  ls
+ 1023  ./dev.sh
+ 1024  sudo ./dev.sh
+ 1025  cat dev.sh 
+ 1026  lsmod
+ 1027  git status
+ 1028  git add *
+ 1029  git status
+ 1030  ls
+ 1031  cd ..
+ 1032  ls
+ 1033  cd ..
+ 1034  ls
+ 1035  sudo echo bmr451 0x4d > /sys/class/i2c-adapter/i2c-0/new_device
+ 1036  sudo su
+ 1037  ls
+ 1038  cd pmbus/
+ 1039  ls
+ 1040  cd pmbus_drivers/
+ 1041  ls
+ 1042  cd pmbus/
+ 1043  ls
+ 1044  cd ..
+ 1045  ls
+ 1046  ./en_i2c_repstart.sh 
+ 1047  sudo ./en_i2c_repstart.sh 
+ 1048  ls
+ 1049  i2cdetect -y 0 
+ 1050  i2cdetect -y 1
+ 1051  lsmod
+ 1052  ls
+ 1053  cd pmbus_drivers/
+ 1054  ls
+ 1055  cd pmbus/
+ 1056  ls
+ 1057  cat Makefile 
+ 1058  cat dev.sh 
+ 1059  sudo modprobe -r zl6100
+ 1060  lsmod
+ 1061  sudo modprobe zl6100 delay=1000
+ 1062  sudo modprobe -r pmbus
+ 1063  lsmod
+ 1064  sudo modprobe pmbus
+ 1065  lsmod
+ 1066  sudo echo bmr451 0x70 > /sys/class/i2c-adapter/i2c-0/new_device
+ 1067  sudo su
+ 1068  cd pmbus/
+ 1069  ls
+ 1070  ./dis_i2c_devs_SEM_board.sh bmr451
+ 1071  sudo su
+ 1072  ./dis_i2c_devs_SEM_board.sh bmr451
+ 1073  ./en_i2c_devs_SEM_board.sh 
+ 1074  sudo ./en_i2c_devs_SEM_board.sh 
+ 1075  sudo ./en_i2c_devs_SEM_board.sh bmr451
+ 1076  sudo ./dis_i2c_devs_SEM_board.sh bmr451
+ 1077  sudo modprobe -r pmbus
+ 1078  sudo ./en_i2c_devs_SEM_board.sh bmr451
+ 1079  sudo ./dis_i2c_devs_SEM_board.sh bmr451
+ 1080  sudo ./en_i2c_devs_SEM_board.sh bmr451
+ 1081  sudo ./dis_i2c_devs_SEM_board.sh bmr451
+ 1082  sudo ./en_i2c_devs_SEM_board.sh bmr451
+ 1083  sudo ./en_i2c_devs_SEM_board.sh bmr46x
+ 1084  sudo ./dis_i2c_devs_SEM_board.sh bmr451
+ 1085  sudo ./en_i2c_devs_SEM_board.sh bmr46x
+ 1086  sudo ./dis_i2c_devs_SEM_board.sh bmr451
+ 1087  sudo ./en_i2c_devs_SEM_board.sh bmr46x
+ 1088  sudo ./dis_i2c_devs_SEM_board.sh bmr451
+ 1089  sudo ./en_i2c_devs_SEM_board.sh bmr451
+ 1090  sudo ./dis_i2c_devs_SEM_board.sh bmr451
+ 1091  sudo ./en_i2c_devs_SEM_board.sh bmr451
+ 1092  sudo ./dis_i2c_devs_SEM_board.sh bm
+ 1093  sudo ./dis_i2c_devs_SEM_board.sh zl6100
+ 1094  sudo ./en_i2c_devs_SEM_board.sh zl6100
+ 1095  sudo ./dis_i2c_devs_SEM_board.sh zl6100
+ 1096  sudo ./en_i2c_devs_SEM_board.sh zl6100
+ 1097  sensors
+ 1098  sudo ./dis_i2c_devs_SEM_board.sh zl6100
+ 1099  sudo ./en_i2c_devs_SEM_board.sh bmr46x
+ 1100  sudo ./dis_i2c_devs_SEM_board.sh zl6100
+ 1101  sudo ./dis_i2c_devs_SEM_board.sh bmr46x
+ 1102  sudo ./en_i2c_devs_SEM_board.sh bmr46x
+ 1103  sudo ./dis_i2c_devs_SEM_board.sh bmr46x
+ 1104  i2cget -y 0 0x4d 0x78 w
+ 1105  i2cget -y 0 0x4d 0x76 w
+ 1106  i2cget -y 0 0x4d 0x72 w
+ 1107  i2cget -y 0 0x4d 0x72 
+ 1108  i2cget -
+ 1109  i2cget -y 0x70 0x78
+ 1110  i2cget -y 0 0x70 0x78
+ 1111  i2cget -y 0 0x70 0x78 w
+ 1112  i2cdetect -y 0
+ 1113  i2cget -y 0 0x70 0x35 w
+ 1114  ls
+ 1115  ./en_i2c_repstart.sh 
+ 1116  sudo ./en_i2c_repstart.sh 
+ 1117  i2cget -y 0 0x70 0x35 w
+ 1118  i2cget -y 0 0x70 0x78 w
+ 1119  i2cget -y 0 0x70 0x78 b
+ 1120  i2cget -y 0 0x70 0x8D b
+ 1121  i2cget -y 0 0x70 0x7D b
+ 1122  sudo cat /sys/module/i2c_bcm2708/parameters/baudrate
+ 1123  i2cget -y 0 0x70 0x7D b
+ 1124  sudo nano /boot/config.txt 
+ 1125  ls
+ 1126  tail dmesg
+ 1127  dmesg
+ 1128  tail dmesg
+ 1129  dmesg -wH
+ 1130  i2cdetect -y 0
+ 1131  i2cdetect -y 1
+ 1132  i2cdetect -y 0
+ 1133  modinfo
+ 1134  lsmod
+ 1135  dmesg
+ 1136  sudo su
+ 1137  i2cdetect -y 0
+ 1138  i2cdetect -y 1
+ 1139  i2cdetect -y 0
+ 1140  ls
+ 1141  i2cdetect -y 0
+ 1142  i2cdetect -y 1
+ 1143  i2cdump 
+ 1144  i2cdump -y 0 0x00-0xFF
+ 1145  i2cdump -y 0 0x03-0x77
+ 1146  i2cdump -y 0 0x03 0x03-0x77
+ 1147  i2cdump -y 0 0x03 0x03
+ 1148  i2cdump -y 0 0x03 
+ 1149  i2cdump -y 0 0x04
+ 1150  i2cdump -y 0 0x00
+ 1151  i2cdump -y 0 0x01
+ 1152  i2cdump -y 0 0x04
+ 1153  i2cdetect -y 1
+ 1154  i2cdump -y 0 0x20
+ 1155  i2cdump -y 0 0x21
+ 1156  i2cdump -y 0 0x
+ 1157  i2cdump -y 0 0x50 
+ 1158  i2cdump -y 0 0x50 c
+ 1159  sudo nano /boot/config.txt 
+ 1160  cat /boot/overlays/README 
+ 1161  sudo nano /boot/config.txt 
+ 1162  sudo reboot
+ 1163  dmesg -wH
+ 1164  i2cdetect -y 0
+ 1165  watch -n 1 i2cdetect -y 0
+ 1166  watch -n 1 i2cdetect -y 1
+ 1167  watch -n 1 i2cdetect -y 0
+ 1168  i2cget -y 0 0x70 0x7D 
+ 1169  watch -n 1 i2cdetect -y 0
+ 1170  i2cget -y 0 0x70 0x7D 
+ 1171  ls
+ 1172  cd pmbus/
+ 1173  ./en_i2c_repstart.sh 
+ 1174  sudo ./en_i2c_repstart.sh 
+ 1175  i2cget -y 0 0x70 0x7D 
+ 1176  sudo ./en_i2c_repstart.sh 
+ 1177  i2cget -y 0 0x70 0x7D 
+ 1178  watch -n 1 i2cget -y 0 0x70 0x7D 
+ 1179  sudo cat /sys/module/i2c_bcm2708/parameters/combined
+ 1180  sudo cat /sys/module/i2c_bcm2708/parameters/baudrate 
+ 1181  watch -n 1 i2cget -y 0 0x70 0x7D 
+ 1182  sudo nano /boot/config.txt 
+ 1183  sudo reboot
+ 1184  watch -n 1 i2cget -y 0 0x70 0x7D 
+ 1185  sudo nano /boot/config.txt 
+ 1186  sudo reboot
+ 1187  i2cdetect -y 0
+ 1188  i2cdetect -y 1
+ 1189  i2cdetect -y 0
+ 1190  watch -n 1 i2cdetect -y 0
+ 1191  watch -n 1 i2cget -y 0 0x70 0x7D 
+ 1192  sudo ./en_i2c_repstart.sh 
+ 1193  cd pmbus/
+ 1194  sudo ./en_i2c_repstart.sh 
+ 1195  watch -n 1 i2cget -y 0 0x70 0x7D 
+ 1196  dmesg -wH
+ 1197  sudo ./en_i2c_repstart.sh 
+ 1198  cd pmbus/
+ 1199  sudo ./en_i2c_repstart.sh 
+ 1200  watch -n 1 i2cget -y 0 0x70 0x7D 
+ 1201  watch -n 1 i2cdetect -y 0
+ 1202  ls
+ 1203  watch -n 1 i2cdetect -y 0
+ 1204  ls
+ 1205  cat en_i2c_devs_SEM_board.sh
+ 1206  watch -n 1 i2cdetect -y 0
+ 1207  ./en_i2c_devs_SEM_board.sh bmr46x
+ 1208  sudo ./en_i2c_devs_SEM_board.sh bmr46x
+ 1209  sudo ./dis_i2c_devs_SEM_board.sh 
+ 1210  sudo ./en_i2c_devs_SEM_board.sh bmr46x
+ 1211  ls
+ 1212  sudo ./dis_i2c_devs_SEM_board.sh 
+ 1213  cat ./dis_i2c_devs_SEM_board.sh 
+ 1214  cat en_i2c_devs_SEM_board.sh
+ 1215  echo bmr46x 0x4d > /sys/class/i2c-adapter/i2c-0/new_device
+ 1216  sudo echo bmr46x 0x4d > /sys/class/i2c-adapter/i2c-0/new_device
+ 1217  sudo su
+ 1218  dmesg -wH
+ 1219  watch -n 1 i2cdetect -y 0
+ 1220  watch -n 1 i2cget -y 0 0x70 0x7D 
+ 1221  cd pmbus/
+ 1222  sudo ./en_i2c_repstart.sh 
+ 1223  watch -n 1 i2cget -y 0 0x70 0x7D 
+ 1224  watch -n 1 i2cdetect -y 0
+ 1225  watch -n 0.2 i2cdetect -y 0
+ 1226  cat en_i2c_devs_SEM_board.sh
+ 1227  lsmod
+ 1228  cat en_i2c_devs_SEM_board.sh
+ 1229  sudo echo bmr46x 0x4d > /sys/class/i2c-adapter/i2c-0/new_device
+ 1230  sudo su
+ 1231  ls
+ 1232  ok
+ 1233  ma teeks pi-le restardi siis
+ 1234  kas vïb
+ 1235  ok
+ 1236  yep
+ 1237  sudo poweroff
+ 1238  dmesg -wH
+ 1239  #you must be root to execute below commands!
+ 1240  #sudo su -
+ 1241  #enable i2crepstart
+ 1242  echo -n 0 > /sys/module/i2c_bcm2708/parameters/combined
+ 1243  echo "ATTACH"
+ 1244  BUS_NR=$1
+ 1245  KERNEL_MODULE=$2
+ 1246  i2cdetect -y $BUS_NR
+ 1247  #check aliases by using cmd "modinfo bmr46x" or "modinfo zl6100" 
+ 1248  CHIP_SERA=bmr46x 
+ 1249  CHIP_SERB=bmr46x
+ 1250  echo $CHIP_SERA 0x4d > /sys/class/i2c-adapter/i2c-0/new_device;
+ 1251  echo $CHIP_SERB 0x70 > /sys/class/i2c-adapter/i2c-0/new_device;
+ 1252  echo $CHIP_SERB 0x71 > /sys/class/i2c-adapter/i2c-0/new_device;
+ 1253  echo $CHIP_SERB 0x72 > /sys/class/i2c-adapter/i2c-0/new_device;
+ 1254  echo $CHIP_SERB 0x74 > /sys/class/i2c-adapter/i2c-0/new_device;
+ 1255  echo $CHIP_SERB 0x76 > /sys/class/i2c-adapter/i2c-0/new_device;
+ 1256  echo "CHECK"
+ 1257  ls
+ 1258  cd pmbus/
+ 1259  ls
+ 1260  ./en_pmbus_devices.sh 
+ 1261  ./en_pmbus_devices.sh 1
+ 1262  ./en_pmbus_devices.sh 1 bmr46x
+ 1263  ./en_pmbus_devices.sh 
+ 1264  i2cdetect -y 0 -a 
+ 1265  i2cdetect -y 0
+ 1266  i2cdetect -a -y 0
+ 1267  ./en_pmbus_devices.sh 1 bmr46x
+ 1268  ./en_pmbus_devices.sh 0 bmr46x
+ 1269  awk
+ 1270  ./en_pmbus_devices.sh 0 bmr46x
+ 1271  ./en_pmbus_devices.sh 0 bmr46x | grep \n
+ 1272  ./en_pmbus_devices.sh 0 bmr46x | grep \\n
+ 1273  ./en_pmbus_devices.sh 0 bmr46x | grep \r
+ 1274  ./en_pmbus_devices.sh 0 bmr46x | grep
+ 1275  ./en_pmbus_devices.sh 0 bmr46x
+ 1276  read a
+ 1277  read ab
+ 1278  ./en_pmbus_devices.sh 0 bmr46x | tr -s ' '
+ 1279  ./en_pmbus_devices.sh 0 bmr46x | tr -s ' ' | cut -d" " -f2-3
+ 1280  ./en_pmbus_devices.sh 0 bmr46x | tr -s ' ' | cut -d" " -f3-3
+ 1281  ./en_pmbus_devices.sh 0 bmr46x | tr -s ' ' | cut -d" " -f1-3
+ 1282  ./en_pmbus_devices.sh 0 bmr46x | tr -s ':' | cut -d" " -f1-3
+ 1283  ./en_pmbus_devices.sh 0 bmr46x | tr -s ':' | cut -d" " -f2-3
+ 1284  ./en_pmbus_devices.sh 0 bmr46x | tr -s ':' | cut -d" " -f2-130
+ 1285  ./en_pmbus_devices.sh 0 bmr46x | grep : | tr -s ':' | cut -d" " -f2-130
+ 1286  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\",] 'print $2'
+ 1287  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\",] '{print $2}'
+ 1288  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\",] '{print $1}'
+ 1289  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\":] '{print $1}'
+ 1290  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\":] '{print $2}'
+ 1291  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\"--] '{print $2}'
+ 1292  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\":] '{print $2}'
+ 1293  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\":\n] '{print $2}'
+ 1294  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\":\n] '{print $3}'
+ 1295  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\":\n] '{print $2}'
+ 1296  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\": ] '{print $2}'
+ 1297  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\": "] '{print $2}'
+ 1298  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\":"] '{print $2}'
+ 1299  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\":] '{print $2}'
+ 1300  ./en_pmbus_devices.sh 0 bmr46x
+ 1301  ./en_pmbus_devices.sh 0 bmr46x | awk -F[\":] '{print $2}'
+ 1302  ./en_pmbus_devices.sh 0 bmr46x
+ 1303  tr 
+ 1304  tr --help
+ 1305  ./en_pmbus_devices.sh 0 bmr46x
+ 1306  tr 
+ 1307  ./en_pmbus_devices.sh 0 bmr46x
+ 1308  awk -F
+ 1309  split
+ 1310  ./en_pmbus_devices.sh 0 bmr46x
+ 1311  tr --help
+ 1312  ./en_pmbus_devices.sh 0 bmr46x
+ 1313  i2cdetect -y $BUS_NR | grep : | awk -F':' '{print $2}' | tr '\n' ' '
+ 1314  i2cdetect -y 0 | grep : | awk -F':' '{print $2}' | tr '\n' ' '
+ 1315  ./en_pmbus_devices.sh 0 bmr46x
+ 1316  i2cdetect
+ 1317  echo bmr46x 4d > /sys/class/i2c-adapter/i2c-0/new_device
+ 1318  sudo echo bmr46x 4d > /sys/class/i2c-adapter/i2c-0/new_device
+ 1319  sudo su
+ 1320  ./en_pmbus_devices.sh 0 bmr46x
+ 1321  ./en_pmbus_devices.sh 0 bmr46x 1
+ 1322  ./en_pmbus_devices.sh 0 bmr46x 0
+ 1323  ./en_pmbus_devices.sh 0 bmr46x EN
+ 1324  ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1325  ./en_pmbus_devices.sh 0 bmr46x EN
+ 1326  ./en_pmbus_devices.sh 0 bmr46x 
+ 1327  ./en_pmbus_devices.sh 0 bmr46x EN
+ 1328  ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1329  ./en_pmbus_devices.sh 0 bmr46x EN
+ 1330  ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1331  ./en_pmbus_devices.sh 0 bmr46x EN
+ 1332  ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1333  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1334  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1335  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1336  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1337  sudo ./en_pmbus_devices.sh 0 bmr46x 
+ 1338  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1339  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1340  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1341  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1342  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1343  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1344  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1345  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1346  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1347  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1348  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1349  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1350  sudo su
+ 1351  dmesg -wH
+ 1352  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1353  cd pmbus/
+ 1354  ls
+ 1355  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1356  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1357  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1358  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1359  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1360  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1361  sensors
+ 1362  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1363  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1364  sensors
+ 1365  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1366  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1367  sensors
+ 1368  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1369  sensors
+ 1370  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1371  sensors
+ 1372  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1373  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1374  sensors
+ 1375  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1376  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1377  sensors
+ 1378  sensors bmr46x-i2c-0-4d
+ 1379  sensors bmr46x-i2c-0-70
+ 1380  sensors bmr46x-i2c-0-71
+ 1381  sensors bmr46x-i2c-0-72
+ 1382  sensors bmr46x-i2c-0-73
+ 1383  sensors bmr46x-i2c-0-74
+ 1384  sensors bmr46x-i2c-0-76
+ 1385  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1386  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1387  sensors bmr46x-i2c-0-72
+ 1388  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1389  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1390  watch -n 1 sensors 
+ 1391  watch -n 0.2 sensors 
+ 1392  oot
+ 1393  go ahead
+ 1394  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1395  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1396  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1397  sudo poweroff
+ 1398  i2cdetect -y 0
+ 1399  i2cdetect -y 1
+ 1400  i2cdetect -y 0
+ 1401  i2cdetect -y 1
+ 1402  i2cdetect -y 0
+ 1403  i2cset -y 0 0x4d 0x51 0x00 0x00 w
+ 1404  i2cset -y 0 0x4d 0x51 0x00 0x00
+ 1405  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1406  gpio get
+ 1407  gpioget all
+ 1408  gpioread all
+ 1409  gpio readall
+ 1410  gpio get 21
+ 1411  gpio read 21
+ 1412  i2cget -y 0 0x4d 0x51 w
+ 1413  i2cget -y 0 0x4d 0x51
+ 1414  i2cget -y 0 0x4d 0x51 c
+ 1415  i2cget -y 0 0x4d 0x51
+ 1416  i2cget -y 0 0x4d 0x51 0x00
+ 1417  i2cget -y 0 0x4d 0x51 0x00 w
+ 1418  i2cget -y 0 0x4d 0x51 w
+ 1419  i2cdetect -y 0
+ 1420  i2cget -y 0 0x4d 0x51 w
+ 1421  i2cget -y 0 0x4d 0x51
+ 1422  i2cget -y 0 0x4d 0x51 ss
+ 1423  i2cget -y 0 0x4d 0x51 c
+ 1424  i2cget -y 0 0x4d 0x51 p
+ 1425  i2cget -y 0 0x4d 0x51 b
+ 1426  i2cget -y 0 0x4d 0x51 w p
+ 1427  i2cget -y 0 0x4d 0x51 wp
+ 1428  i2cget -y 0 0x4d 0x51
+ 1429  i2cget -y 0 0x4d 0x51 w
+ 1430  i2cget -y0 0x4d 0x51 w
+ 1431  i2cget -y 0 0x4d 0x51 w
+ 1432  i2cdetect -y 0
+ 1433  i2cget -y 0 0x70 0x51 w
+ 1434  gpio read 21
+ 1435  i2cset -y 1 0x24 0x03 0x44
+ 1436  i2cset -y 0 0x24 0x03 0x44
+ 1437  gpio read 21
+ 1438  gpio read 5
+ 1439  gpio read 21
+ 1440  gpio read 5
+ 1441  gpio readall
+ 1442  gpio read 1
+ 1443  gpio read 21
+ 1444  gpio read 3
+ 1445  gpio mode 4 out; gpio write 4 1
+ 1446  sudo /home/pi/pmbus/en_i2c_devs_SEM_board.sh
+ 1447  sensors
+ 1448  i2cset -y 1 0x24 0x03 0x44
+ 1449  i2cset -y 0 0x24 0x03 0x44
+ 1450  gpio read 21
+ 1451  i2cset -y 0 0x24 0x03 0x44
+ 1452  gpio read 21
+ 1453  i2cset -y 0 0x24 0x03 0x44
+ 1454  gpio read 21
+ 1455  i2cset -y 0 0x24 0x03 0x44
+ 1456  gpio read 2
+ 1457  i2cget -y 0 0x4d 0x51 w
+ 1458  i2cget -y 0 0x70 0x51 w
+ 1459  i2cget -y 0 0x71 0x51 w
+ 1460  cd pmbus
+ 1461  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1462  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1463  sudo reboot
+ 1464  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1465  cd pmbus
+ 1466  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1467  i2cget -y 0 0x70 0x51 w
+ 1468  i2cget -y 0 0x4d 0x51 w
+ 1469  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1470  i2cget -y 0 0x70 0x51 w
+ 1471  i2cget -y 0 0x71 0x51 w
+ 1472  i2cget -y 0 0x72 0x51 w
+ 1473  i2cget -y 0 0x70 0x51 w
+ 1474  i2cget -y 0 0x71 0x51 w
+ 1475  i2cget -y 0 0x74 0x51 w
+ 1476  i2cget -y 0 0x76 0x51 w
+ 1477  i2cset -y 1 0x24 0x03 0x44
+ 1478  i2cset -y 0 0x24 0x03 0x44
+ 1479  i2cset -y 1 0x24 0x03 0xF7; i2cset -y 1 0x24 0x01 0xF7
+ 1480  i2cset -y 0 0x24 0x03 0xF7; i2cset -y 0 0x24 0x01 0xF7
+ 1481  i2cset -y 0 0x24 0x03 0xFF; i2cset -y 0 0x24 0x01 0xFF
+ 1482  i2cset -y 0 0x24 0x03 0x44
+ 1483  gpio read 21
+ 1484  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1485  gpio read 21
+ 1486  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1487  i2cset -y 0 0x4d 0x70 0x0000 w
+ 1488  gpio read 21
+ 1489  i2cset -y 0 0x4d 0x70 0xeb48 w
+ 1490  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1491  gpio read 21
+ 1492  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1493  i2cset -y 0 0x24 0x03 0x44
+ 1494  gpio read 21
+ 1495  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1496  gpio read 21
+ 1497  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1498  i2cset -y 0 0x70 0x51 0x0000 w
+ 1499  gpio read 21
+ 1500  i2cset -y 0 0x70 0x51 0xeb48 w
+ 1501  i2cset -y 0 0x71 0x51 0x0000 w
+ 1502  gpio read 21
+ 1503  i2cset -y 0 0x71 0x51 0xeb48 w
+ 1504  gpio read 21
+ 1505  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1506  gpio read 21
+ 1507  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1508  pio read 21
+ 1509  i2cset -y 0 0x24 0x03 0x44
+ 1510  gpio read 21
+ 1511  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1512  gpio read 21
+ 1513  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1514  gpio read 21
+ 1515  i2cset -y 0 0x70 0x51 0x0000 w
+ 1516  gpio read 21
+ 1517  i2cset -y 0 0x70 0x51 0xeb48 w
+ 1518  i2cset -y 0 0x4d 0x51 0xebf8 w
+ 1519  gpio read 21
+ 1520  i2cset -y 0 0x24 0x03 0x44
+ 1521  gpio read 21
+ 1522  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1523  gpio read 21
+ 1524  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1525  gpio read 21
+ 1526  i2cset -y 0 0x4d 0x51 0xebf8 w
+ 1527  gpio read 21
+ 1528  i2cset -y 0 0x4d 0x51 0xeff8 w
+ 1529  gpio read 21
+ 1530  i2cset -y 0 0x4d 0x51 0xeba8 w
+ 1531  gpio read 21
+ 1532  i2cset -y 0 0x24 0x03 0x44
+ 1533  gpio read 21
+ 1534  i2cset -y 0 0x70 0x51 0x0000 w
+ 1535  gpio read 21
+ 1536  i2cset -y 0 0x70 0x51 0xeb48 w
+ 1537  gpio read 21
+ 1538  i2cset -y 0 0x70 0x51 0xe 0xb48 w
+ 1539  i2cset -y 0 0x70 0x51 0xe 0xb48 i
+ 1540  i2cset -y 0 0x70 0x51 0xeb48 i
+ 1541  i2cset -y 0 0x70 0x51 0xeb48 s
+ 1542  i2cset -y 0 0x70 0x51 0xeb48 w
+ 1543  i2cset -y 0 0x70 0x51 0xeb 0x48 i
+ 1544  gpio read 21
+ 1545  i2cset -y 0 0x24 0x03 0x44
+ 1546  gpio read 21
+ 1547  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1548  gpio read 21
+ 1549  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1550  gpio read 21
+ 1551  i2cset -y 0 0x4d 0x51 0xea 0xf8 i
+ 1552  gpio read 21
+ 1553  i2cset -y 0 0x4d 0x51 0xea 0xf8 w
+ 1554  i2cset -y 0 0x4d 0x51 0xea 0xf8 s
+ 1555  gpio read 21
+ 1556  i2cset -y 0 0x4d 0x51 0xea 0xf8 c
+ 1557  i2cset -y 0 0x4d 0x51 0xeaf8 c
+ 1558  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1559  i2cset -y 0 0x4d 0x51 0xeaf8 b
+ 1560  i2cset -y 0 0x4d 0x51 0xeaf8 s
+ 1561  i2cset -y 0 0x4d 0x51 0xeaf8 sp
+ 1562  i2cset -y 0 0x4d 0x51 0xeaf8 i
+ 1563  i2cset -y 0 0x4d 0x51 0xeaf8
+ 1564  gpio read 21
+ 1565  +
+ 1566  3,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ 1567  gpio read 21
+ 1568  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1569  gpio read 21
+ 1570  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1571  gpio read 21
+ 1572  i2cset -y 0 0x24 0x03 0x44
+ 1573  gpio read 21
+ 1574  i2cset -y 0 0x24 0x03 0x44
+ 1575  gpio read 21
+ 1576  i2cset -y 0 0x24 0x03 0x44
+ 1577  gpio read 21
+ 1578  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1579  gpio read 21
+ 1580  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1581  gpio read 21
+ 1582  i2cset -y 0 0x24 0x03 0x44
+ 1583  gpio read 21
+ 1584  i2cset -y 0 0x4d 0x51 0x0000 w
+ 1585  gpio read 21
+ 1586  i2cset -y 0 0x4d 0x51 0xeaf8 w
+ 1587  gpio read 21
+ 1588  i2cset -y 0 0x24 0x03 0x44
+ 1589  gpio read 21
+ 1590  i2cset -y 0 0x24 0x03 0x44
+ 1591  gpio read 21
+ 1592  i2cdetect -y 0
+ 1593  i2cdetect -y 1
+ 1594  i2cdetect -y 0
+ 1595  i2cdetect -y 1
+ 1596  i2cdetect -y 0
+ 1597  i2cdetect -y 1
+ 1598  i2cdetect -y 0
+ 1599  i2cdetect -y 1
+ 1600  i2cdetect -y 0
+ 1601  sensors
+ 1602  cd pmbus/
+ 1603  ös
+ 1604  ls
+ 1605  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1606  sensors
+ 1607  i2cdetect -y 0
+ 1608  sensors
+ 1609  i2cdetect -y 0
+ 1610  i2cdetect -y 1
+ 1611  sudo ./en_pmbus_devices.sh 1 bmr46x EN
+ 1612  i2cdetect -y 1
+ 1613  i2cdetect -y 0
+ 1614  sudo ./en_pmbus_devices.sh 2 bmr46x EN
+ 1615  i2cdetect -y 0
+ 1616  i2cdetect -y 1
+ 1617  sensors
+ 1618  sudo ./en_pmbus_devices.sh 1 bmr46x DIS
+ 1619  sensors
+ 1620  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1621  sensors
+ 1622  sudo reboot
+ 1623  sudo ./en_pmbus_devices.sh 1 bmr46x EN
+ 1624  cd pmbus/
+ 1625  sudo ./en_pmbus_devices.sh 1 bmr46x EN
+ 1626  sensors
+ 1627  sudo ./en_pmbus_devices.sh 1 bmr46x DIS
+ 1628  sudo ./en_pmbus_devices.sh 1 bmr46x EN
+ 1629  sensors
+ 1630  watch -n 0.5 sensors 
+ 1631  sudo ./en_pmbus_devices.sh 1 bmr46x DIS
+ 1632  sudo ./en_pmbus_devices.sh 1 bmr46x EN
+ 1633  watch -n 0.5 sensors 
+ 1634  cd pmbus/
+ 1635  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1636  sensors
+ 1637  sensors 1
+ 1638  sensors 0
+ 1639  sensors
+ 1640  watch -n 0.5 sensors 
+ 1641  gpio readall
+ 1642  i2cdetect -y 1
+ 1643  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1644  cd pmbus/
+ 1645  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1646  i2cdetect -y 1
+ 1647  sudo ./en_pmbus_devices.sh 1 bmr46x DIS
+ 1648  i2cdetect -y 1
+ 1649  cd pmbus/
+ 1650  sudo ./en_pmbus_devices.sh 1 bmr46x EN
+ 1651  i2cdetect -y 1
+ 1652  i2cdetect -y 0
+ 1653  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1654  sensors
+ 1655  watch sensors
+ 1656  lsmod
+ 1657  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1658  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1659  watch sensors
+ 1660  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1661  watch sensors
+ 1662  git status
+ 1663  watch sensors
+ 1664  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1665  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1666  watch sensors
+ 1667  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1668  watch sensors
+ 1669  sudo ./en_pmbus_devices.sh 0 bmr46x DIS
+ 1670  sudo ./en_pmbus_devices.sh 0 bmr46x EN
+ 1671  ls
+ 1672  i2cdetect -y 1
+ 1673  i2cdetect -y 0
+ 1674  i2cdetect -y 1
+ 1675  i2cdetect -y 0
+ 1676  i2cdetect -y 1
+ 1677  ls /lib/modules/generic/kernel/drivers/spi/
+ 1678  ls
+ 1679  lsmod |grep -q spi_sc18is602
+ 1680  lsmod | grep -q spi_sc18is602
+ 1681  lsmod | grep spi_sc18is602
+ 1682  grep --help
+ 1683  ls
+ 1684  cd pmbus/
+ 1685  ls
+ 1686  cd build_kernel_modules/
+ 1687  ls
+ 1688  cd ..
+ 1689  ls
+ 1690  cd pmbus_drivers/
+ 1691  ls
+ 1692  cd pmbus/
+ 1693  ls
+ 1694  git status
+ 1695  cd ..
+ 1696  ls
+ 1697  git status
+ 1698  cd ..
+ 1699  ls
+ 1700  git status
+ 1701  cd ..
+ 1702  git status
+ 1703  cd pmbus/
+ 1704  ls
+ 1705  git status
+ 1706  diff en_i2c_devs_SEM_board.sh 
+ 1707  difftool
+ 1708  diff
+ 1709  git add *
+ 1710  git status
+ 1711  cd examples/pmbus/i2c_check/
+ 1712  ls
+ 1713  make clean
+ 1714  git status
+ 1715  git reset i2c_check
+ 1716  git reset --hard i2c_check.c
+ 1717  git reset --hard i2c_check
+ 1718  git status
+ 1719  git checkout -- i2c_check.c
+ 1720  git checkout -- i2c_check
+ 1721  git status
+ 1722  git checkout i2c_check.o
+ 1723  git status
+ 1724  make clean
+ 1725  ls
+ 1726  git status
+ 1727  git --help
+ 1728  git reset i2c_check.o
+ 1729  git reset -- i2c_check.o
+ 1730  git reset -- i2c_check.c
+ 1731  git status
+ 1732  git reset -- i2c_check
+ 1733  git status
+ 1734  cd ..
+ 1735  ls
+ 1736  cd pmbus_drivers/
+ 1737  ls
+ 1738  cd pmbus/
+ 1739  ls
+ 1740  cat dev.sh 
+ 1741  lsmod
+ 1742  ls
+ 1743  git status
+ 1744  make clean
+ 1745  sudo make clean
+ 1746  cat Makefile 
+ 1747  ls
+ 1748  cat dev.sh 
+ 1749  lsmod
+ 1750  git status
+ 1751  ls
+ 1752  git reset -- zl6100.o
+ 1753  git reset -- zl6100.mod.o
+ 1754  git reset -- zl6100.mod.c
+ 1755  git status
+ 1756  git reset -- zl6100.ko
+ 1757  git status
+ 1758  git reset -- .zl6100.ko.cmd
+ 1759  git reset -- .zl6100.mod.o.cmd
+ 1760  git reset -- .zl6100.o.cmd
+ 1761  cat modules.order 
+ 1762  git reset -- .tmp_versions/zl6100.mod
+ 1763  cat ../../.config 
+ 1764  git status
+ 1765  git difftool Makefile
+ 1766  git diff Makefile
+ 1767  cat bmr46x
+ 1768  cat bmr46x.c 
+ 1769  ls
+ 1770  cat Makefile 
+ 1771  cat dev.sh 
+ 1772  lsmod
+ 1773  lsmod -r zl6100
+ 1774  rmmod zl6100 
+ 1775  sudo rmmod zl6100 
+ 1776  lsmod
+ 1777  ls
+ 1778  git status
+ 1779  git commit -m "19.05.16 - before I2C SPI bridge"
+ 1780  git status
+ 1781  git reset 
+ 1782  git status
+ 1783  git reset -- 
+ 1784  git status
+ 1785  git push
+ 1786  git remote
+ 1787  git status
+ 1788  ls
+ 1789  ./dev.sh 
+ 1790  sudo ./dev.sh 
+ 1791  lsmod
+ 1792  ls
+ 1793  cd ..
+ 1794  ls
+ 1795  cd ..
+ 1796  ls
+ 1797  cd examples/
+ 1798  ls
+ 1799  cd pmbus/
+ 1800  ls
+ 1801  cd i2c_check/
+ 1802  ls
+ 1803  cat Makefile 
+ 1804  cd ../../../
+ 1805  ls
+ 1806  cd pmbus_drivers/
+ 1807  ls
+ 1808  cd pmbus/
+ 1809  ls
+ 1810  git status
+ 1811  cd ..
+ 1812  ls
+ 1813  cd ..
+ 1814  ls
+ 1815  git status
+ 1816  cd pmbus_d
+ 1817  cd pmbus_drivers/
+ 1818  ls
+ 1819  cd pmbus/
+ 1820  ls
+ 1821  cat dev.sh 
+ 1822  ./dev.sh 
+ 1823  sudo ./dev.sh 
+ 1824  lsmod
+ 1825  ls
+ 1826  cd ..
+ 1827  ls
+ 1828  cd ..
+ 1829  ls
+ 1830  cd ..
+ 1831  ls
+ 1832  cd ..
+ 1833  ls
+ 1834  cd ..
+ 1835  ls
+ 1836  cd ls
+ 1837  ls
+ 1838  cd home/
+ 1839  ls
+ 1840  cd pi/
+ 1841  ls
+ 1842  cd linux-bc1669c846b629cface0aaa367afb2b9c6226faf/
+ 1843  ls
+ 1844  cd drivers/
+ 1845  ls
+ 1846  cd ..
+ 1847  ls
+ 1848  cd ..
+ 1849  ls
+ 1850  cd ..
+ 1851  ls
+ 1852  cd ..
+ 1853  ls
+ 1854  cd dev/
+ 1855  ls
+ 1856  cd ..
+ 1857  ls
+ 1858  cd bin/
+ 1859  ls
+ 1860  cd ..
+ 1861  ls
+ 1862  cd var/
+ 1863  ls
+ 1864  cd ..
+ 1865  ls
+ 1866  cd home/
+ 1867  ls
+ 1868  cd pi/
+ 1869  ls
+ 1870  cd linux
+ 1871  ls
+ 1872  cd ..
+ 1873  ls -la
+ 1874  ls
+ 1875  df -h
+ 1876  cd linux-bc1669c846b629cface0aaa367afb2b9c6226faf/
+ 1877  ls
+ 1878  cd drivers/
+ 1879  ls
+ 1880  cd spi/
+ 1881  ls
+ 1882  cat spi-sc18is602.c 
+ 1883  ls
+ 1884  cd ..
+ 1885  ls
+ 1886  cd i2c/
+ 1887  ls
+ 1888  cat i2c-boardinfo.c 
+ 1889  ls
+ 1890  cd ..
+ 1891  ls
+ 1892  cd spi/
+ 1893  ls
+ 1894  cd ..
+ 1895  ls
+ 1896  cd ..
+ 1897  ls
+ 1898  cd ..
+ 1899  ls
+ 1900  cd pmbus/
+ 1901  ls
+ 1902  cd pmbus_dev/
+ 1903  ls
+ 1904  cd ..
+ 1905  ls
+ 1906  rm pmbus_dev
+ 1907  rm -r pmbus_dev
+ 1908  ls
+ 1909  cd ..
+ 1910  ls
+ 1911  lsmod
+ 1912  ls
+ 1913  cd pmbus/
+ 1914  ls
+ 1915  cd i2c_spi_bridge/
+ 1916  ls
+ 1917  make clean
+ 1918  find . -exec touch {} \;
+ 1919  make clean
+ 1920  make 
+ 1921  find . -exec touch {} \;
+ 1922  make 
+ 1923  ls
+ 1924  ./dev.sh
+ 1925  sudo ./dev.sh
+ 1926  ls
+ 1927  ls -la
+ 1928  chmod +x dev.sh 
+ 1929  sudo ./dev.sh
+ 1930  ls mod
+ 1931  lsmod
+ 1932  ls
+ 1933  git status
+ 1934  cd ..
+ 1935  ls
+ 1936  git status
+ 1937  git add i2c_spi_bridge/
+ 1938  sudo git add *
+ 1939  git status
+ 1940  git commit -m "i2cspibridge working without patch"
+ 1941  git status
+ 1942  ls
+ 1943  cd i2c_spi_bridge/
+ 1944  ls
+ 1945  patch
+ 1946  ls
+ 1947  ./dev.sh 
+ 1948  sudo ./dev.sh 
+ 1949  lsmod
+ 1950  ls
+ 1951  patch -b spi-sc18is602.c info/07-spi-sc18is602.c-always-set-CS1-to-control-the-mux.patch 
+ 1952  git status
+ 1953  git difftool spi-sc18is602.c
+ 1954  diff
+ 1955  diff spi-sc18is602.c
+ 1956  git status
+ 1957  cat spi-sc18is602.c
+ 1958  patch -b spi-sc18is602.c info/08-add-driver-binding-support-to-spi-sc18is602.c.patch 
+ 1959  cat spi-sc18is602.c
+ 1960  git status
+ 1961  sudo ./dev.sh 
+ 1962  ls
+ 1963  ls mod
+ 1964  lsmod
+ 1965  ls
+ 1966  cd info/
+ 1967  ls
+ 1968  cd ..
+ 1969  ls
+ 1970  cat dev.sh 
+ 1971  /sys/class/spi_master/
+ 1972  ls /sys/class/spi_master/
+ 1973  ls
+ 1974  cat /boot/config.txt 
+ 1975  sudo nano /boot/config.txt 
+ 1976  sudo reboot
+ 1977  Hello. You can also type. Hi there
+ 1978  OK.
+ 1979  mtdinfo
+ 1980  mtdinfo --help
+ 1981  mtdinfo -a
+ 1982  mtd_debug 
+ 1983  mtd_debug info /sys/class/mtd/mtd0/dev
+ 1984  mtd_debug info /dev/mtd0
+ 1985  ls -latr /dev/mtd0
+ 1986  chmod 644 /dev/mtd0
+ 1987  sidp chmod 644 /dev/mtd0
+ 1988  sudo  chmod 644 /dev/mtd0
+ 1989  mtd_debug info /dev/mtd0
+ 1990  mtd_debug 
+ 1991  mtd_debug erase /dev/mtd0 0 0x10000
+ 1992  sudo mtd_debug erase /dev/mtd0 0 0x10000
+ 1993  sudo mtd_debug read /dev/mtd0 0 0x10000 /tmp/flash_t_dump
+ 1994  hexdump -C /tmp/flash_t_dump | less
+ 1995  dmesg | less
+ 1996  sudo mtd_debug read /dev/mtd0 0 0x10 /tmp/flash_t_dump
+ 1997  hexdump -C /tmp/flash_t_dump | less
+ 1998  sudo mtd_debug write /dev/mtd0 0 0x10 /proc/cpuinfo
+ 1999  sudo mtd_debug read /dev/mtd0 0 0x10 /tmp/flash_t_dump
+ 2000  hexdump -C /tmp/flash_t_dump | less
+ 2001  hexdump -C /tmp/flash_t_dump 
+ 2002  sudo mtd_debug read /dev/mtd0 0 0x20 /tmp/flash_t_dump
+ 2003  hexdump -C /tmp/flash_t_dump 
+ 2004  ls
+ 2005  cd pmbus/
+ 2006  history >> help.txt
