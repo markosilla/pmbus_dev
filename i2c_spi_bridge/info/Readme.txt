@@ -4,6 +4,8 @@ Custom built kernel module, except some changes in spi-sc18is602
 
 Use ../dev.sh to build/develop
 
+Use ../flash_sem/flash_sem_file.sh for flashing
+
 Hi Sten,
 
 I have attached the 2 patch we have made on the spi bridge driver, which is located at drivers/spi/spi-sc18is602.c in kernel source tree

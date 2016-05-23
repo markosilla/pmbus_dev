@@ -1,7 +1,7 @@
 TARGET		:= $(shell uname -r)
 KERNEL_MODULES	:= /lib/modules/$(TARGET)
 KERNEL_BUILD	:= $(KERNEL_MODULES)/build
-DRIVER 		:= spi-sc18is602
+DRIVER 		:= spi-sc18is602 mtd/spi-nor/spi-nor mtd/devices/m25p80
 
 obj-m		:= $(patsubst %,%.o,$(DRIVER))
 obj-ko		:= $(patsubst %,%.ko,$(DRIVER))
