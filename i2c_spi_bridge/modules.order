@@ -1,3 +1,0 @@
-kernel//home/pi/pmbus/i2c_spi_bridge/spi-sc18is602.ko
-kernel//home/pi/pmbus/i2c_spi_bridge/mtd/spi-nor/spi-nor.ko
-kernel//home/pi/pmbus/i2c_spi_bridge/mtd/devices/m25p80.ko
