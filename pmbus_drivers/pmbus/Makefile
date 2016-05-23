@@ -11,5 +11,16 @@ all:
 	#make -C /lib/modules/`uname -r`/build	M=$(PWD) modules_install
 
 clean:
-
+	-rm -f 	$(obj-m) \
+			$(obj-ko)
+	-rm -f $(patsubst %,.%.cmd,$(obj-m))
+	-rm -f $(patsubst %,.%.cmd,$(obj-ko))
+	-rm -f $(patsubst %,.%.mod.o.cmd,$(DRIVER))
+	-rm -f $(patsubst %,%.mod.c,$(DRIVER))
+	-rm -f $(patsubst %,%.mod.o,$(DRIVER))	
+	
+	-rm -f modules.order
+	-rm -f Module.symvers
+	-rm -rf .tmp_versions/
+	
 	make -C $(KERNEL_BUILD)	M=$(PWD) clean
