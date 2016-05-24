@@ -38,7 +38,7 @@ get_mtd_device () {
 	local mtddev=""
 	#--------------
 	[ -e /sys/class/spi_master/spi${bus}/ ] || echo sc18is602b 0x28 > /sys/bus/i2c/devices/i2c-${bus}/new_device 
-	[ -e /sys/class/spi_master/spi${bus}/spi${bus}.0 ] || echo "m25p80 1000000 0" > /sys/class/spi_master/spi${bus}/hook_to 
+	[ -e /sys/class/spi_master/spi${bus}/spi${bus}.0 ] || echo "m25p80 1000000 0" >/sys/class/spi_master/spi${bus}/hook_to 
 	sleep 1
 	#-------------
 	for i in 0 1 2 3 4 5 6 7 8 9 10
@@ -75,7 +75,7 @@ get_mtd_device 0
 get_mtd_device 1
 
 #programming
-for mtddev in $mtddev1
+for mtddev in $mtddev0 $mtddev1
 do
 	do_flash $mtddev &
 done
@@ -84,6 +84,3 @@ wait
 
 #disable_spibridge
 #release_sem
-
-
-
